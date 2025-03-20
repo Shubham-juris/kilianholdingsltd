@@ -5,7 +5,6 @@ const WelcomeSection = () => {
   return (
     <Box
       sx={{
-        opacity: '0.6',
         maxWidth: '1500px',
         width: '100%',
         height: 'auto',
@@ -55,8 +54,12 @@ const WelcomeSection = () => {
           can be daunting. That's why we're here to guide you through every step
           of the process with expertise, compassion, and dedication.{' '}
         </Typography>
+    <div className='underline font-bold'>
+      <a href="/">CONTECT US</a>
+    </div>
       </Box>
     </Box>
+
   );
 };
 
