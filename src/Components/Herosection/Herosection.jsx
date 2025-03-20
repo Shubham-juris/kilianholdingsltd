@@ -4,7 +4,6 @@ import HeroImage from '../../assets/Herosection/HeroImage.webp'
 const Herosection = () => {
   return (
     <Box sx={{
-        opacity:'0.4',
         mb:{xs:3, sm:4},
         display:'flex',
         justifyContent:'center',
@@ -38,7 +37,7 @@ const Herosection = () => {
             <Button sx={{
                 color:'#000000',
                 backgroundColor:'#fff',
-                width:{xs:'80%', sm:'40%'},
+                width:{xs:'80%', sm:'12%'},
                 mt:3,
 
             }}>
