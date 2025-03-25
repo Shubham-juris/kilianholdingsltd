@@ -58,7 +58,7 @@ const AboutSection = () => {
       >
         {" "}
         At Kilian Holdings ,our mission is to provide exceptional paralegal
-        services focused on meticulous documentation assistance, We are
+        services focused on meticulous documentation  assistance, We are
         dedicated to supporting our clients with precision and expertise,
         ensuring their legal documentation needs are met with efficiency and
         reliability{" "}
