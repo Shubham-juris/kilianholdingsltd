@@ -1,16 +1,22 @@
-import React from "react";
-import { Box, Container, Typography, Grid, Link, IconButton } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Link,
+  IconButton,
+} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
- 
+
 const Footer = () => {
   return (
     <Box
       sx={{
-        opacity:'0.7',
-        overflow:'hidden',
+        opacity: "0.7",
+        overflow: "hidden",
         backgroundColor: "#222",
         color: "white",
         py: 4,
@@ -25,67 +31,117 @@ const Footer = () => {
               KILIAN HOLDINGS LTD.
             </Typography>
             <Typography variant="body2">
-            Subscribe to receive exclusive promotions and special discount offers.
+              Subscribe to receive exclusive promotions and special discount
+              offers.
             </Typography>
           </Grid>
- 
+
           {/* Quick Links */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
               Quick Links
             </Typography>
-            <Link href="/" color="inherit" underline="none" display="block" sx={{ mb: 1 }}>
+            <Link
+              href="/"
+              color="inherit"
+              underline="none"
+              display="block"
+              sx={{ mb: 1 }}
+            >
               Home
             </Link>
-            <Link href="/services" color="inherit" underline="none" display="block" sx={{ mb: 1 }}>
+            <Link
+              href="/services"
+              color="inherit"
+              underline="none"
+              display="block"
+              sx={{ mb: 1 }}
+            >
               Services
             </Link>
-            <Link href="/about" color="inherit" underline="none" display="block" sx={{ mb: 1 }}>
+            <Link
+              href="/about"
+              color="inherit"
+              underline="none"
+              display="block"
+              sx={{ mb: 1 }}
+            >
               {/* About Us */}
             </Link>
-            <Link href="/contact" color="inherit" underline="none" display="block">
+            <Link
+              href="/contact"
+              color="inherit"
+              underline="none"
+              display="block"
+            >
               {/* Contact Us */}
             </Link>
           </Grid>
- 
+
           {/* Social Media & Contact */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
               Connect With Us
             </Typography>
             <Box>
-              <IconButton href="https://facebook.com" target="_blank" sx={{ color: "white" }}>
+              <IconButton
+                href="https://facebook.com"
+                target="_blank"
+                sx={{ color: "white" }}
+              >
                 <FacebookIcon />
               </IconButton>
-              <IconButton href="https://twitter.com" target="_blank" sx={{ color: "white" }}>
+              <IconButton
+                href="https://twitter.com"
+                target="_blank"
+                sx={{ color: "white" }}
+              >
                 <TwitterIcon />
               </IconButton>
-              <IconButton href="https://linkedin.com" target="_blank" sx={{ color: "white" }}>
+              <IconButton
+                href="https://linkedin.com"
+                target="_blank"
+                sx={{ color: "white" }}
+              >
                 <LinkedInIcon />
               </IconButton>
-              <IconButton href="https://instagram.com" target="_blank" sx={{ color: "white" }}>
+              <IconButton
+                href="https://instagram.com"
+                target="_blank"
+                sx={{ color: "white" }}
+              >
                 <InstagramIcon />
               </IconButton>
             </Box>
-            <Typography variant="body2" sx={{  }}>
+            <Typography variant="body2" sx={{}}>
               {/*  123 Logistics Street, City, Country */}
             </Typography>
             <Typography variant="body2">
-                {/* support@ykfreight.com */}
-                </Typography>
-            <Typography variant="body2">
-                 {/* +1 234 567 890 */}
-                 </Typography>
+              {/* support@ykfreight.com */}
+            </Typography>
+            <Typography variant="body2">{/* +1 234 567 890 */}</Typography>
           </Grid>
         </Grid>
- 
+
         {/* Copyright Section */}
-        <Box sx={{ textAlign: "center", my: 3, mb:3, borderTop: "1px solid gray", pt: 2 }}>
-          <Typography variant="body2">© {new Date().getFullYear()} KILIAN HOLDINGS LTD. All Rights Reserved.</Typography>
+        <Box
+          sx={{
+            textAlign: "center",
+            my: 3,
+            mb: 3,
+            borderTop: "1px solid gray",
+            pt: 2,
+          }}
+        >
+          <Typography variant="body2">
+            © {new Date().getFullYear()} KILIAN HOLDINGS LTD. All Rights
+            Reserved.
+          </Typography>
         </Box>
       </Container>
+      <p></p>
     </Box>
   );
 };
- 
+
 export default Footer;
