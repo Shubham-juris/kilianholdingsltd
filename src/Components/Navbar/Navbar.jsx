@@ -4,6 +4,7 @@ import img2 from "../../assets/Navbar/NavbarImage.webp";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +13,7 @@ const Navbar = () => {
       <div>
     
         <div className="flex relative justify-around items-center w-full h-[150px]">
-          <div className="w-full h-[50px] flex items-center">
+          <div className="container w-full h-[50px] flex items-center">
             <button className="rounded-lg w-7 " onClick={() => setIsOpen(true)}>
               <img src={img} alt="img" />
             </button>

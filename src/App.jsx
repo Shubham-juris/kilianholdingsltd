@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Herosection from "./Components/Herosection/Herosection";
 import WelcomeSection from "./Components/WelcomeSection/WelcomeSection";
 import AboutSection from "./Components/AboutSection/AboutSection";
-import ContactUs from "./Components/ContactUs/ContactUs";
+// import ContactUs from "./Components/ContactUs/ContactUs";
 import Footer from "./Components/Footer/Footer";
 // import Sitemaintenance from './Components/Sitemaintenance/Sitemaintenance'
 
@@ -16,7 +16,7 @@ function App() {
       <Herosection />
       <WelcomeSection />
       <AboutSection />
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Footer />
       {/* <Sitemaintenance/> */}
     </>
