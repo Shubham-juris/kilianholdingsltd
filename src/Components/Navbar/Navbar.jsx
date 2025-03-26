@@ -4,6 +4,7 @@ import img2 from "../../assets/Navbar/NavbarImage.webp";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,6 @@ const Navbar = () => {
   return (
     <>
       <div>
-    
         <div className="flex relative justify-around items-center w-full h-[150px]">
           <div className="container w-full h-[50px] flex items-center">
             <button className="rounded-lg w-7 " onClick={() => setIsOpen(true)}>
@@ -47,14 +47,14 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <ul className="font-medium" style={{padding:'5em'}}>
+          <ul className="font-medium" style={{ padding: "5em" }}>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="flex items-center p-10 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">HOME</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
