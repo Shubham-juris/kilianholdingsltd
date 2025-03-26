@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <div>
-        {/* Button to open the drawer */}
+    
         <div className="flex relative justify-around items-center w-full h-[150px]">
           <div className="w-full h-[50px] flex items-center">
             <button className="rounded-lg w-7 " onClick={() => setIsOpen(true)}>
@@ -31,7 +31,7 @@ const Navbar = () => {
 
         {/* Sidebar Drawer */}
         <div
-          className={`fixed top-0 left-0 z-40 w-75 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 ${
+          className={`fixed top-0 left-0 z-40 w-[26em] h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <ul className="space-y-2  font-medium mt-4">
+          <ul className="font-medium" style={{padding:'5em'}}>
             <li>
               <a
                 href="#"
