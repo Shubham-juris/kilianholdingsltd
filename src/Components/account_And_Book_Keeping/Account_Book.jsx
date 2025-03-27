@@ -96,6 +96,5 @@ function Account_Book() {
 
    
   );
-}
 
-export default Account_Book;
+}
