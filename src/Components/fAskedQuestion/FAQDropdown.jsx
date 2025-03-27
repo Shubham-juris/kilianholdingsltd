@@ -39,28 +39,53 @@ const FAQDropdown = () => {
   };
 
   return (
-    <div
-      style={{ margin: "1rem auto" }}
-      className="w-full max-w-2xl mx-auto p-4"
-    >
-      {faqs.map((faq, index) => (
-        <div key={index} className="border-b last:border-b-0 border-gray-200">
-          <button
-            onClick={() => toggleDropdown(index)}
-            className="w-full flex justify-between items-center p-4 text-left hover:bg-gray-50 transition-colors"
+    <div>
+      <div style={{ textAlign: "center", margin: "3rem auto" }}>
+        <h2
+          style={{
+            margin: "1.5rem auto",
+            fontSize: "2.5rem",
+            color: "darkGreen",
+            fontWeight: "bold",
+          }}
+        >
+          Frequently Asked Questions
+        </h2>
+        <p>Please reach us at if you cannot find an answer to your question.</p>
+      </div>
+      <div
+        style={{ margin: "1rem auto" }}
+        className="w-full max-w-2xl mx-auto p-4"
+      >
+        {faqs.map((faq, index) => (
+          <div
+            style={{
+              margin: "2rem auto",
+              borderBottom: "2px solid gray",
+              padding: "1rem",
+            }}
+            key={index}
+            className="border-b last:border-b-0 border-gray-200"
           >
-            <span className="font-semibold text-gray-800">{faq.question}</span>
-            {openDropdown === index ? (
-              <ChevronUp className="text-gray-500" />
-            ) : (
-              <ChevronDown className="text-gray-500" />
+            <button
+              onClick={() => toggleDropdown(index)}
+              className="w-full flex justify-between items-center p-4 text-left hover:bg-gray-50 transition-colors"
+            >
+              <span className="font-semibold text-gray-800">
+                {faq.question}
+              </span>
+              {openDropdown === index ? (
+                <ChevronUp className="text-gray-500" />
+              ) : (
+                <ChevronDown className="text-gray-500" />
+              )}
+            </button>
+            {openDropdown === index && (
+              <div className="p-4 bg-gray-50 text-gray-700">{faq.answer}</div>
             )}
-          </button>
-          {openDropdown === index && (
-            <div className="p-4 bg-gray-50 text-gray-700">{faq.answer}</div>
-          )}
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
