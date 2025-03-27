@@ -6,5 +6,3 @@ import tailwindcss from 'tailwindcss' // Fixed import
 export default defineConfig({
   plugins: [react(),  tailwindcss()]
 })
-
-

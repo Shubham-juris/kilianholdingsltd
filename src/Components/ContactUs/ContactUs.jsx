@@ -12,16 +12,16 @@ import Grid from "@mui/material/Grid";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
-// Import contact image
+
 import contactImage from "../../assets/ContactUs/image.png";
 
 const ContactUs = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200, once: false, mirror: true }); // Continuous animations on scroll
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 1200, once: false, mirror: true });
+  // }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -43,354 +43,93 @@ const ContactUs = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  // Professional Contact Info Text with Word-by-Word Animation
+
   const contactInfoText =
     "At Kilian Holdings, we understand that navigating the legal landscape can be daunting.";
 
   return (
-    <Box
-      sx={{
-        opacity: "0.7",
-        padding: { xs: 2, sm: 4, md: 8 },
-        maxWidth: "1440px",
-        margin: "0 auto",
-        background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
-        minHeight: "100vh",
-        borderRadius: 4,
-        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-        overflow: "hidden",
-      }}
-    >
-      {/* Animated Header with No Top Margin */}
-      <Fade in timeout={1500}>
-        <Typography
-          variant="h3"
-          align="center"
-          gutterBottom
-          sx={{
-            fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-            fontWeight: "bold",
-            color: "#1976d2",
-            textShadow: "2px 2px 8px rgba(0, 0, 0, 0.3)",
-            animation: "slideIn 1.5s ease-out",
-            "@keyframes slideIn": {
-              "0%": { transform: "translateY(-100px)", opacity: 0 },
-              "100%": { transform: "translateY(0)", opacity: 1 },
-            },
-          }}
-          data-aos="zoom-in"
+    <>
+      <div>
+        <h1 className="text-center text-[2em]" style={{ color: "#0C3F40", marginBottom:"2.7em" }}><b>ContactUs</b></h1>
+      </div>
+      <div className="flex gap-20 w-full h-screen justify-center">
+    <div className="  h-screen">
+      <h1 className="text-[22px]" style={{marginBottom:"15px"}}>Drop us a line!</h1>
+      <form className="max-w-md w-full space-y-6 p-6 bg-white">
+        {/* Name Input */}
+        <div className="flex flex-col"  style={{marginBottom:"25px"}}>
+          <label htmlFor="name" className="text-sm font-medium text-gray-700">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className="mt-1 p-2 w-full border-b-1 rounded "
+          />
+        </div>
+
+        {/* Email Input */}
+        <div className="flex flex-col" style={{marginBottom:"25px"}}>
+          <label htmlFor="email" className="text-sm font-medium text-gray-700">
+            Email *
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="mt-1 p-2 w-full border-b-1 rounded "
+          />
+        </div>
+
+        {/* Message Input */}
+        <div className="flex flex-col" style={{marginBottom:"25px"}}>
+          <label htmlFor="message" className="text-sm font-medium text-gray-700">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            className="mt-1 p-2 w-full border-b-1 rounded h-[5.8em]"
+          />
+        </div>
+
+        {/* File Attachment (UI Only) */}
+        <div className="flex justify-between items-center  p-2  cursor-pointer">
+          <span className="text-gray-600">📎 Attach Files</span>
+          <span className="text-gray-400">Attachments (0)</span>
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="button"
+          className="w-20 text-[13px] bg-black text-white  rounded hover:bg-stone-800 transition relative left-[13em] top-5" style={{padding:"0.9em", }}
         >
-          Contact Us
-        </Typography>
-      </Fade>
+          SEND
+        </button>
+      </form>
+      <div style={{marginTop:"25px"}}>
+      <p className="text-stone-400 text-[12px]" style={{ color:"#0C3F40"}}>This site is protected by reCAPRCHAN and the Google Private Policy and Terms of  Service apply</p>
+      </div>
+    </div>
 
-      {/* Uniform Sized Contact Cards with Centered Icons */}
-      <Grid container spacing={4} sx={{ justifyContent: "center", mt: 4 }}>
-        {[
-          {
-            icon: <LocationOnIcon fontSize="large" sx={{ color: "#1976d2" }} />,
-            title: "Our Main Office",
-            content: (
-              <a
-                href="https://www.google.com/maps"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none", color: "inherit" }}
-              ></a>
-            ),
-          },
-          {
-            icon: <PhoneIcon fontSize="large" sx={{ color: "#1976d2" }} />,
-            title: "Phone Number",
-            content: (
-              <a
-                href="tel:+1 587-550-2982"
-                style={{ textDecoration: "none", color: "inherit" }}
-              ></a>
-            ),
-          },
-          {
-            icon: <EmailIcon fontSize="large" sx={{ color: "#1976d2" }} />,
-            title: "Email",
-            content: (
-              <a
-                href="mailto:example@gmail.com"
-                style={{ textDecoration: "none", color: "inherit" }}
-              ></a>
-            ),
-          },
-        ].map((card, index) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            key={index}
-            data-aos="flip-up"
-            data-aos-delay={index * 300}
-          >
-            <Card
-              sx={{
-                textAlign: "center",
-                borderRadius: 3,
-                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
-                backgroundColor: "#fff",
-                transition: "transform 0.4s ease, box-shadow 0.4s ease",
-                "&:hover": {
-                  transform: "translateY(-10px) rotate(2deg)",
-                  boxShadow: "0 12px 32px rgba(0, 0, 0, 0.25)",
-                },
-                height: "200px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <CardContent
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexGrow: 1,
-                  p: 0,
-                }}
-              >
-                <Box
-                  sx={{
-                    animation: "pulseIcon 2s infinite",
-                    "@keyframes pulseIcon": {
-                      "0%, 100%": { transform: "scale(1)" },
-                      "50%": { transform: "scale(1.2)" },
-                    },
-                    mb: 2,
-                  }}
-                >
-                  {card.icon}
-                </Box>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", color: "#1976d2" }}
-                >
-                  {card.title}
-                </Typography>
-                <Typography sx={{ mt: 1 }}>{card.content}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+        <div>
+        <h2 className="text-[24px]" style={{marginBottom:"18px"}}>Better yet, see us in person! </h2>
+        <p style={{marginBottom:"20px"}}>We love our customers, so feel free to visit during normal business hours. </p>
+        <h2 className="text-[24px]" style={{marginBottom:"20px"}}>Kilian Holdings Ltd </h2>
+        <p style={{marginBottom:"18px"}}>4804 42 Ave, Innisfail, Alberta T4G 1N4, Canada </p>
+        <p style={{marginBottom:"18px"}}><span style={{ color:"#0C3F40"}}>#3 5105 51 </span>Ave Drayton Valley, Alberta <br/>T7A 0C3 </p>
+        <p style={{marginBottom:"18px"}}>Unit <span style={{ color:"#0C3F40"}}> 215, 321</span> Main Street Northeast, Slave lake TOG 2A0 </p>
+        <p style={{marginBottom:"18px"}}><span style={{ color:"#0C3F40"}}>5009D</span>, 51Street, Barhead, T7N 1L1 </p>
+        <p style={{marginBottom:"18px"}}>Toll free number:<span style={{ color:"#0C3F40"}}> 1-833-215-9686 </span></p>
+        <span style={{marginBottom:"18px"}}>Email</span>
+        <p style={{marginBottom:"18px" ,color:"#0C3F40"}}>kilianholdingltd@gmail.com </p>
+        <p className="text-[24px]" style={{marginBottom:"18px"}}>Hours </p>
+        </div>
 
-      {/* Contact Form and Info Section */}
-      <Grid container spacing={6} sx={{ mt: 6 }}>
-        {/* Left: Professional Info & Enhanced Animated Image */}
-        <Grid item xs={12} md={6} data-aos="fade-right" data-aos-delay="200">
-          <Box sx={{ textAlign: "center", p: 2 }}>
-            <Typography
-              variant="h5"
-              gutterBottom
-              sx={{
-                fontWeight: "bold",
-                color: "#1976d2",
-                animation: "fadeInText 2s ease-in-out infinite",
-                "@keyframes fadeInText": {
-                  "0%, 100%": { opacity: 0.8 },
-                  "50%": { opacity: 1 },
-                },
-              }}
-            >
-              Contact Info
-            </Typography>
-            <Typography
-              sx={{
-                lineHeight: 1.8,
-                color: "#555",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                gap: "0.3em",
-              }}
-            >
-              {contactInfoText.split(" ").map((word, index) => (
-                <span
-                  key={index}
-                  style={{
-                    display: "inline-block",
-                    animation: `wordFadeIn 0.5s ease-in-out ${
-                      index * 0.2
-                    }s forwards`,
-                    opacity: 0,
-                  }}
-                >
-                  {word}
-                </span>
-              ))}
-            </Typography>
-            <style>
-              {`
-                @keyframes wordFadeIn {
-                  0% { opacity: 0; transform: translateY(20px); }
-                  100% { opacity: 1; transform: translateY(0); }
-                }
-              `}
-            </style>
-            <Box sx={{ mt: 4, position: "relative", overflow: "hidden" }}>
-              <img
-                src={contactImage}
-                alt="Contact"
-                style={{
-                  borderRadius: "50%",
-                  width: "100%",
-                  maxWidth: "240px",
-                  border: "4px solid #1976d2",
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
-                  transition: "all 0.5s ease",
-                  animation: "spinFloat 6s ease-in-out infinite",
-                  "@keyframes spinFloat": {
-                    "0%": { transform: "translateY(0) rotate(0deg)" },
-                    "50%": { transform: "translateY(-20px) rotate(180deg)" },
-                    "100%": { transform: "translateY(0) rotate(360deg)" },
-                  },
-                }}
-              />
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: "-10px",
-                  left: "-10px",
-                  width: "260px",
-                  height: "260px",
-                  borderRadius: "50%",
-                  background:
-                    "radial-gradient(circle, rgba(25, 118, 210, 0.2), transparent)",
-                  animation: "glow 3s ease-in-out infinite",
-                  "@keyframes glow": {
-                    "0%, 100%": { opacity: 0.5, transform: "scale(1)" },
-                    "50%": { opacity: 1, transform: "scale(1.05)" },
-                  },
-                  zIndex: -1,
-                }}
-              />
-            </Box>
-          </Box>
-        </Grid>
 
-        {/* Right: Animated Contact Form */}
-        <Grid item xs={12} md={6} data-aos="fade-left" data-aos-delay="400">
-          <Typography
-            variant="h5"
-            gutterBottom
-            textAlign="center"
-            sx={{
-              fontWeight: "bold",
-              color: "#1976d2",
-              animation: "bounceIn 1.5s ease",
-              "@keyframes bounceIn": {
-                "0%": { transform: "scale(0.8)", opacity: 0 },
-                "60%": { transform: "scale(1.1)", opacity: 1 },
-                "100%": { transform: "scale(1)" },
-              },
-            }}
-          >
-            Get in Touch
-          </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 3,
-              width: "100%",
-              maxWidth: "500px",
-              mx: "auto",
-              p: 3,
-              backgroundColor: "#fff",
-              borderRadius: 3,
-              boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
-              transition: "transform 0.5s ease",
-              "&:hover": { transform: "translateY(-5px)" },
-            }}
-          >
-            <TextField
-              label="Name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              fullWidth
-              required
-              variant="outlined"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: 2,
-                  transition: "all 0.3s ease",
-                  "&:hover fieldset": { borderColor: "#1976d2" },
-                },
-              }}
-            />
-            <TextField
-              label="Email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              fullWidth
-              required
-              variant="outlined"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: 2,
-                  transition: "all 0.3s ease",
-                  "&:hover fieldset": { borderColor: "#1976d2" },
-                },
-              }}
-            />
-            <TextField
-              label="Message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              multiline
-              rows={4}
-              fullWidth
-              required
-              variant="outlined"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: 2,
-                  transition: "all 0.3s ease",
-                  "&:hover fieldset": { borderColor: "#1976d2" },
-                },
-              }}
-            />
-            <Button
-              variant="contained"
-              type="submit"
-              fullWidth
-              sx={{
-                py: 1.5,
-                borderRadius: 2,
-                backgroundColor: "#1976d2",
-                transition: "all 0.4s ease",
-                "&:hover": {
-                  backgroundColor: "#1565c0",
-                  transform: "scale(1.05) rotate(2deg)",
-                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
-                },
-                animation: "pulseButton 2s infinite",
-                "@keyframes pulseButton": {
-                  "0%, 100%": { boxShadow: "0 0 10px rgba(25, 118, 210, 0.5)" },
-                  "50%": { boxShadow: "0 0 20px rgba(25, 118, 210, 0.8)" },
-                },
-              }}
-            >
-              Submit
-            </Button>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+      </div>
+    </>
   );
 };
 
