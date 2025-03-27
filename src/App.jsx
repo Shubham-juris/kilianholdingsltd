@@ -15,7 +15,6 @@ function App() {
 
       {/* app routes */}
       <AppRouter />
-
       <Footer />
     </>
   );

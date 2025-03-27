@@ -4,7 +4,7 @@ const AboutUs = () => {
       className="grid grid-cols-2 grid-rows-[0.40fr_1fr_1fr_1fr_1fr_1fr] h-full w-full gap-x-[280px] gap-y-[50px]"
       style={{ padding: "64px" }}
     >
-      <div className="col-start-1 col-end-3 row-start-1 row-end-2  text-[3em] font-bold h-full flex items-center justify-center text-center ">
+      <div className="col-start-1 col-end-3 row-start-1 row-end-2  text-[3em] font-bold h-full flex items-center justify-center text-center">
         About kilian holdings Ltd
       </div>
       <div className="col-start-1 col-end-2 row-start-2 row-end-3 place-self-center h-full w-full ">

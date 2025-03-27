@@ -15,24 +15,24 @@ const Navbar = () => {
         <div className="flex relative justify-around items-center w-full h-[150px]">
           <div className="container w-full h-[50px] flex items-center">
             <button className="rounded-lg w-7 " onClick={() => setIsOpen(true)}>
-              <img src={img} alt="img" />
+              <img src={img} alt="menu" />
             </button>
           </div>
           <img
             className="absolute left-1/2 transform -translate-x-1/2 w-[110px]"
             src={img2}
-            alt="img2"
+            alt="logo"
           />
-          <div className="flex  gap-x-4" style={{ color: "#0C3F40" }}>
-            <FaSearch className="size-7 " />
-            <MdOutlineShoppingCart className="size-7 " />
-            <CgProfile className="size-7 " />
+          <div className="flex gap-x-4 text-[#0C3F40]">
+            <FaSearch className="size-7" />
+            <MdOutlineShoppingCart className="size-7" />
+            <CgProfile className="size-7" />
           </div>
         </div>
 
         {/* Sidebar Drawer */}
         <div
-          className={`fixed top-0 left-0 z-40 w-[26em] h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 ${
+          className={`fixed top-0 left-0 z-40 w-[24em] h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -84,12 +84,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/stockmarket"
+                onClick={() => setIsOpen(false)}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">STOCK MARKET</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -101,19 +102,19 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/clintportal"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CLINT PORTAL</span>
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CEREERS</span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link
@@ -126,7 +127,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/Blogs"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">BLOGS</span>
