@@ -1,6 +1,7 @@
 import Herosection from "../Components/Herosection/Herosection";
 import AboutSection from "../Components/AboutSection/AboutSection";
 import WelcomeSection from "../Components/WelcomeSection/WelcomeSection";
+import ClientPortel from "../Components/ClientPortel/ClientPortel";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Herosection />
       <WelcomeSection />
       <AboutSection />
+      <ClientPortel/>
     </>
   );
 }
