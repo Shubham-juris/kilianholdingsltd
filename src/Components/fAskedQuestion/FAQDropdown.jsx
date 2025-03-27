@@ -44,7 +44,11 @@ const FAQDropdown = () => {
       className="w-full max-w-2xl mx-auto p-4"
     >
       {faqs.map((faq, index) => (
-        <div key={index} className="border-b last:border-b-0 border-gray-200">
+        <div
+          style={{ margin: "2rem auto", borderBottom: "2px solid darkgray" }}
+          key={index}
+          className="border-b last:border-b-0 border-gray-200"
+        >
           <button
             onClick={() => toggleDropdown(index)}
             className="w-full flex justify-between items-center p-4 text-left hover:bg-gray-50 transition-colors"
