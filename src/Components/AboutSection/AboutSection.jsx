@@ -67,7 +67,7 @@ const AboutSection = () => {
             At Kilian Holdings, our team is comprised of highly skilled and
             dedicated paralegals who are committed to providing exceptional
             service to our clients. With a diverse range of expertise and
-            backgrounds in the legal field, our team is equipped to handle
+            backgrounds in the legal field, our teambnmbhnjhjhgjjh is equipped to handle
             various documentation needs with precision and professionalism.
           </p>
         </div>
