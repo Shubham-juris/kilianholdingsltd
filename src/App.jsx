@@ -1,24 +1,22 @@
 import "./App.css";
 import TopHeader from "./Components/TopHeader/TopHeader";
 import Navbar from "./Components/Navbar/Navbar";
-import Herosection from "./Components/Herosection/Herosection";
-import WelcomeSection from "./Components/WelcomeSection/WelcomeSection";
-import AboutSection from "./Components/AboutSection/AboutSection";
-// import ContactUs from "./Components/ContactUs/ContactUs";
 import Footer from "./Components/Footer/Footer";
 // import Sitemaintenance from './Components/Sitemaintenance/Sitemaintenance'
+// react router
+
+import AppRouter from "./Router/AppRouter";
 
 function App() {
   return (
     <>
       <TopHeader />
       <Navbar />
-      <Herosection />
-      <WelcomeSection />
-      <AboutSection />
-      {/* <ContactUs /> */}
+
+      {/* app routes */}
+      <AppRouter />
+
       <Footer />
-      {/* <Sitemaintenance/> */}
     </>
   );
 }
