@@ -51,18 +51,20 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
+                onClick={() => setIsOpen(false)}
                 className="flex items-center p-10 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">HOME</span>
               </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/aboutus"
+                onClick={() => setIsOpen(false)}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">ABOUT US</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -73,12 +75,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="accountbook"
+                onClick={() => setIsOpen(false)}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">ACCOUNTING & BOOKKEEPING</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -98,31 +101,32 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/clintportal"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CLINT PORTAL</span>
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CEREERS</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/contactus"
+                onClick={() => setIsOpen(false)}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CONTACT US</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
-                href="#"
+                href="/Blogs"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">BLOGS</span>

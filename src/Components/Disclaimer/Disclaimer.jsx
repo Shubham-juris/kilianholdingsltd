@@ -1,16 +1,30 @@
+import DisP from "./DisP";
 
+const Disclaimer = () => {
+  const str1 =
+    "The information provided on this website is for general informational purposes only. All content, including text, graphics, and other material, is provided in good faith; however, we make no representation or warranty of any kind regarding its accuracy, adequacy, validity, reliability, or completeness.";
+  const str2 =
+    "Under no circumstances shall we be liable for any loss or damage incurred as a result of the use of the site or reliance on any information provided on the site. Your use of the site and reliance on any information is solely at your own risk.";
+  const str3 =
+    "This website may contain links to external websites that are not provided, maintained, or affiliated with us in any way. We do not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external sites.";
+  const str4 =
+    "The information on this site is not intended to be a substitute for professional advice. Always seek the advice of a qualified professional regarding any legal, financial, or health-related concerns. Never disregard professional advice because of something you have read on this website.";
 
-const Disclaimer =() =>{
-    return( <div className="w-200 mx-auto">
-        <div className="text-stone-600 text-center text-[2em]">
-            Legal Disclaimer
-            <div className="text-stone-600 text-center text-[30px] p-2 ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia soluta, commodi delectus laborum aperiam quos nesciunt assumenda neque officia rem, et veniam dignissimos sit accusamus error numquam autem voluptatum ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam ratione eius quasi cumque, doloribus ducimus accusantium corrupti amet quas placeat saepe. Explicabo nisi quidem consectetur fuga, sit at dicta labore totam modi. Corporis incidunt praesentium eveniet deleniti exercitationem, quos, veritatis totam, nisi repellendus harum laudantium obcaecati laborum distinctio numquam?</p>
-                
-                <p className=" mr-4 inline-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum reprehenderit omnis alias nisi architecto repellendus eaque asperiores doloribus, sit culpa placeat accusamus incidunt, voluptate voluptatem quibusdam pariatur atque, facere doloremque voluptatum illum molestiae? Expedita laudantium culpa, ad error numquam, quasi maxime laboriosam maiores modi incidunt earum aperiam rem non eveniet.</p>
-            </div>
-        </div>
-        </div>
-    )
-}
+  return (
+    <div
+      style={{ textAlign: "left", margin: "0 auto" }}
+      className="w-[80%] md:w-[70%] mx-auto flex flex-col items-center"
+    >
+      <h2 className="text-stone-600 text-left text-[2.5rem] font-semibold">
+        Legal Disclaimer
+      </h2>
+      <div className="text-stone-600 text-[1.125rem] font-semilight p-2 text-left">
+        <DisP text={str1} />
+        <DisP text={str2} />
+        <DisP text={str3} />
+        <DisP text={str4} />
+      </div>
+    </div>
+  );
+};
 export default Disclaimer;
