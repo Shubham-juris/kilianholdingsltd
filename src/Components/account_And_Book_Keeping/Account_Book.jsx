@@ -1,5 +1,4 @@
-// import accountBookImg from "../../assets/AccountingBook/accountBook.jpg"; // Importing the image properly
-
+// import accountBookImg from "../../assets/AccountingBook/accountBook.jpg"; 
 function Account_Book() {
   return (
     <>
