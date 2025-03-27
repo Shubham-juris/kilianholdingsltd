@@ -29,7 +29,6 @@ const Navbar = () => {
             <CgProfile className="size-7" />
           </div>
         </div>
-
         {/* Sidebar Drawer */}
         <div
           className={`fixed top-0 left-0 z-40 w-[22em] h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 ${
