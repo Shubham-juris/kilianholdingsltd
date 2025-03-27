@@ -101,19 +101,19 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/clintportal"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CLINT PORTAL</span>
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">CEREERS</span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link
@@ -126,7 +126,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/Blogs"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span className="ml-3">BLOGS</span>
