@@ -73,13 +73,14 @@ function Account_Book() {
             <div className="flex  justify-center gap-20" style={{margin :'1rem'}} >
 
               <div className=" border-white w-[333px]">
-                  <h1 className="text-2xl text-center">Record-Keeping</h1>
+                  <h1 className="text-2xl text-center">Tax Compliance</h1>
                   <img className="w-full" src="../../src/assets/AccountingBook/accountBook.jpg" style={{marginTop: '1.8rem'}}/>
                   <p className="text-center" style={{padding : '1.5rem 1rem'}}>Accountants and bookkeepers maintain detailed records of all financial transactions, including sales, purchases, expenses, and payments. This meticulous record-keeping provides a clear picture of a company's financial health and performance.</p>
               </div>
 
               <div className=" border-white w-[333px]">
-                  <h1 className="text-2xl text-center">Record-Keeping</h1>
+                  <h1 className="text-2xl text-center">Financial Analysis
+                  </h1>
                   <img className="w-full" src="../../src/assets/AccountingBook/accountBook.jpg" style={{marginTop: '1.8rem'}}/>
                   <p className="text-center" style={{padding : '1.5rem 1rem'}}>Accountants and bookkeepers maintain detailed records of all financial transactions, including sales, purchases, expenses, and payments. This meticulous record-keeping provides a clear picture of a company's financial health and performance.</p>
               </div>
