@@ -18,7 +18,6 @@ function App() {
       <Herosection />
       <WelcomeSection />
       <AboutSection />
-  
 
       <ContactUs />
       <AboutUs />
