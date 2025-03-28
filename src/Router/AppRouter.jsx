@@ -4,14 +4,10 @@ import AboutUsPage from "../pages/AboutUsPage";
 import AccountBookPage from "../pages/AccountBookPage";
 import ContactUsPage from "../pages/ContactUsPage";
 import ClintPortal from "../pages/clintportal";
-<<<<<<< Updated upstream
-import StockMarketPage from "../pages/StockMarketPage";
-=======
 import Blogs from "../pages/Blogs";
 
 
 
->>>>>>> Stashed changes
 
 export default function AppRouter() {
   return (
@@ -20,14 +16,8 @@ export default function AppRouter() {
       <Route path="/aboutus" element={<AboutUsPage />} />
       <Route path="/accountbook" element={<AccountBookPage />} />
       <Route path="/contactus" element={<ContactUsPage />} />
-<<<<<<< Updated upstream
-      <Route path="/clintportal" element={<ClintPortal />} />
-      <Route path="/stockmarket" element={<StockMarketPage />} />
-      {/* <Route path="/services" element={<Services/>} /> */}
-=======
       <Route path="/clintportal" element={<ClintPortal/>} />
       <Route path="/blogs" element={<Blogs/>} />
->>>>>>> Stashed changes
     </Routes>
   );
 }

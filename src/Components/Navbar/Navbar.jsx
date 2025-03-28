@@ -127,13 +127,8 @@ const Navbar = () => {
             </li>
             <li style={{marginBottom:"1.2em"}}>
               <a
-<<<<<<< Updated upstream
                 href="/Blogs"
                 className="flex items-center p-2 text-[#0C3F40] rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-=======
-                href="/blogs"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
->>>>>>> Stashed changes
               >
                 <span className="ml-3">BLOGS</span>
               </a>
